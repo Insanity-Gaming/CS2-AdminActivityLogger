@@ -122,7 +122,7 @@ public class AdminActivityLogger : BasePlugin, IPluginConfig<AdminActivityLogger
     private HookResult OnPlayerChat(EventPlayerChat @event, GameEventInfo info)
     {
         var msg = @event.Text;
-        bool isListener = true;
+        bool isListener = false;
         foreach (var cmd in _chatListeners)
         {
             if (!msg.StartsWith(cmd)) continue;
